@@ -1,0 +1,586 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center; /* Vertically center the content */
+    text-align: left; /* Align text to the left */
+    background-image: url('../assets/back2.jpg'); /* Replace with your background image */
+    background-size: cover; /* Ensure the background covers the section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid repetition */
+    overflow: hidden; /* Prevent overflow */
+    padding: 0 5%; /* Add padding to create some space around content */
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Place content above the background */
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+    width: 50%; /* Set content width to 50% of the hero section */
+    margin-left: 0; /* Ensure the content starts from the left edge */
+}
+
+/* Hero Title Styling */
+.hero-content h1 {
+    font-size: 3.5rem; /* Adjust heading size */
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+/* Hero Subtitle Styling */
+.hero-content p {
+    font-size: 1.2rem; /* Adjust subtitle font size */
+    margin-top: 10px;
+    line-height: 1.5; /* Better line spacing */
+}
+
+/* Hero Details Styling */
+.hero-details {
+    list-style: none; /* Remove default list styling */
+    margin: 20px 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.hero-details li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.hero-details li::before {
+    content: '✔'; /* Add checkmark icon */
+    margin-right: 10px;
+    color: #ffa500; /* Bright orange for emphasis */
+    font-size: 1.2rem;
+}
+
+/* Call-to-Action Button Styling */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #ffa500; /* Bright orange button */
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #ff8c00; /* Slightly darker orange on hover */
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2980b9;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-us-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2980b9; /* Blue color for the section title */
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.reason {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px; /* Added margin bottom for spacing between cards */
+}
+
+.reason:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reason .icon {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: #ffa500; /* Set the icon color to match the home section */
+}
+
+.reason h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.reason p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Our Process Section */
+/* .process {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.process h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2980b9;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    width: 22%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.step h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+} */
+
+
+/* Our Process Section */
+.process {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.process h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2980b9;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 22%;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.process-icon {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: #ffa500; /* Orange color for icons */
+}
+
+.step h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2980b9;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    font-size: 1.5rem;
+    color: #2980b9;
+}
+
+.testimonial-card p:last-child {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2980b9;
+}
+
+.portfolio-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.portfolio-card h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* General Responsive Styling */
+@media (max-width: 1200px) {
+
+    .about-us .about-us-content,
+    .why-choose-us .reasons,
+    .process .process-steps,
+    .testimonial-cards,
+    .portfolio-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reason,
+    .step,
+    .testimonial-card,
+    .portfolio-card {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    .about-us-image {
+        max-width: 400px;
+    }
+
+    .about-us-text {
+        max-width: 500px;
+    }
+
+    .reason,
+    .step {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+
+    .process-steps {
+        gap: 10px;
+    }
+
+    .step {
+        width: 45%;
+    }
+
+    .portfolio-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-image {
+        width: 80%;
+    }
+
+    .reason,
+    .step {
+        width: 80%;
+    }
+
+    .reason img,
+    .step img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-card {
+        width: 90%;
+    }
+
+    .portfolio-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-image {
+        width: 90%;
+    }
+
+    .reason,
+    .step {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+
+    .portfolio-card {
+        width: 100%;
+    }
+
+    .testimonial-card img,
+    .portfolio-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-card p {
+        font-size: 1rem;
+    }
+
+    .portfolio-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .portfolio-card p {
+        font-size: 1rem;
+    }
+}
